@@ -30,6 +30,7 @@ gem 'passenger'
 group :development, :test do
   gem 'pry'
   gem 'pry-doc'
+  gem 'byebug'
 
   #
   gem 'rspec-rails'

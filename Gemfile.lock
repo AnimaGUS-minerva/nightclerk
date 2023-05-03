@@ -71,6 +71,7 @@ GEM
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    byebug (11.1.3)
     cbor-canonical (0.1.2)
     cbor-deterministic (0.1.3)
     cbor-diag (0.8.4)
@@ -222,6 +223,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  byebug
   cbor-diag
   debug
   looksee

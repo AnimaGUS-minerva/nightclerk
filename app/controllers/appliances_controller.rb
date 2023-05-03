@@ -1,9 +1,9 @@
 require 'byebug'
 
-class ServersController < ApplicationController
+class AppliancesController < ApplicationController
 
   def create
-    appliance = Server.new
+    appliance = Appliance.new
     appliance.requesting_address = request.env["REMOTE_ADDR"]
     unless params[:email]
       head 404, :text => "Missing email"

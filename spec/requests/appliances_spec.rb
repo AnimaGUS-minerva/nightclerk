@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Server, type: :request do
+RSpec.describe Appliance, type: :request do
   def appliance_default_cert
     @appliance_default_cert ||= IO.binread("spec/files/appliance_default.crt")
   end
@@ -15,7 +15,7 @@ RSpec.describe Server, type: :request do
       params = Hash.new
       body = params.to_json
 
-      post "/servers", :params => body, :headers => env
+      post "/appliances", :params => body, :headers => env
       expect(response).to have_http_status(404)
     end
 
@@ -29,7 +29,7 @@ RSpec.describe Server, type: :request do
       params[:email] = "foo@example.com"
       body = params.to_json
 
-      post "/servers", :params => body, :headers => env
+      post "/appliances", :params => body, :headers => env
       expect(response).to have_http_status(201)
     end
   end

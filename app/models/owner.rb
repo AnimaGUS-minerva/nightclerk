@@ -1,3 +1,3 @@
 class Owner < ApplicationRecord
-  has_many :servers
+  has_many :appliances
 end

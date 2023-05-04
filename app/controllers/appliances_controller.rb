@@ -14,7 +14,10 @@ class AppliancesController < ApplicationController
     appliance.owner = owner
     appliance.save!
 
-    head 201, :location => url_for(appliance)
+    # now create an activity to start the onboarding.
+    activity = appliance.onboard_start!
+
+    head 201, :location => url_for(activity)
   end
 
 end

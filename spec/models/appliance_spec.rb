@@ -17,5 +17,11 @@ RSpec.describe Appliance, type: :model do
       two = appliances(:two)
       expect(two.activities.count).to eq(0)
     end
+
+    it "should create an activity when asked to onboard" do
+      two = appliances(:two)
+      act02 = two.onboard_start!
+      expect(act02).to_not be_nil
+    end
   end
 end

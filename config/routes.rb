@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  resources :activities
-  #resources :owners
-  resources :appliances
+  resources :activities, only: [:show]
+  resources :appliances, only: [:create]
 
   # Defines the root path route ("/")
   # root "articles#index"

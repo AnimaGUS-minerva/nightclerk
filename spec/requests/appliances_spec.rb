@@ -31,6 +31,7 @@ RSpec.describe Appliance, type: :request do
 
       post "/appliances", :params => body, :headers => env
       expect(response).to have_http_status(201)
+      expect(response.location).to match(/http:\/\/www.example.com\/activities\/.*/)
     end
   end
 end

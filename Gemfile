@@ -24,6 +24,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+gem 'rabl'
+gem 'responders'
+
 # state_machine gem, documented more at:
 #   https://blog.appsignal.com/2022/06/22/state-machines-in-ruby-an-introduction.html
 # also see doc/appliance_states.svg
